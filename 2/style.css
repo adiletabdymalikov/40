@@ -1,0 +1,7 @@
+*{
+    box-sizing: border-box;
+}
+.box{
+    background-color: aquamarine;
+    width: 50%;
+}
