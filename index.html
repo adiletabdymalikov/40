@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+
+    </style>
+</head>
+
+<body>
+
+    <p></p>
+
+
+
+   
+    <button id="hide"class="fa-solid fa-sun "></button>
+    <button id="show"class="fa-solid fa-moon"></button></div>
+
+    <script>
+       $(document).ready(function () {
+    $("#hide").click(function () {
+        $("#img1").show();
+        $("#img2").hide();
+        $("body").css({ "background-color": "white", "color": "black" });
+        $(".container").css({ "background-color": "#f5f5dc", "color": "green" });
+        $(".con").css({ "background-color": "white", "color": "black" });
+    });
+
+    $("#show").click(function () {
+        $("#img1").hide();
+        $("#img2").show();
+        $("body").css({ "background-color": "black", "color": "white" });
+        $(".container").css({ "background-color": "#222", "color": "red" });
+        $(".con").css({ "background-color": "black", "color": "white" });
+    });
+});
+
+
+    </script>
+
+</body>
+
+</html>
