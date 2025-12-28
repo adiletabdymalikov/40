@@ -1,17 +1,17 @@
+$(document).ready(function () {
 
-function day() {
-  let block = document.getElementsByClassName('block1')[0];
-block.style.bagckgraoundColor = '#ffffcc';
-document.body.style.backgroundColor = 'white';
+    function upDown() {
+        $(".matchbox")
+            .css({ transition: "1s", transform: "translateZ(60px) translateY(-70px)" })
+        
+        setTimeout(() => {
+            $(".matchbox")
+                .css({ transition: "2s", transform: "translateZ(60px) translateY(0px)" });
+        }, 1000);
 
-}
+        setTimeout(upDown, 3000);
+    }
 
-function night() {
-  let block = document.getElementsByClassName('block1')[0];
-      block.style.backgroundColor = '';
-      document.body.style.backgroundColor = 'black'; 
-    
-}
+    upDown();
 
-document.getElementById('day').addEventListener('click', day);
-document.getElementById('night').addEventListener('click', night);
+});

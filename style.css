@@ -1,3 +1,99 @@
-body{
-    background-color: black;
+body {
+    background: #eee;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+
+.scene {
+    width: 200px;
+    height: 200px;
+    perspective: 800px;
+    transform-style: preserve-3d;
+    animation: spin 10s infinite linear;
+    position: relative;
+}
+
+
+.box {
+    width: 200px;
+    height: 120px;
+    position: absolute;
+    transform-style: preserve-3d;
+}
+
+
+.matchbo {
+    transform: translateZ(0px);
+}
+
+
+.matchbox {
+    position: relative;
+    transform: translateZ(60px);
+}
+
+
+.face {
+    position: absolute;
+    background: #f2e3c6;
+    border: 2px solid #b89b6d;
+    backface-visibility: hidden;
+}
+
+.front,
+.back {
+    width: 200px;
+    height: 120px;
+}
+
+.left,
+.right {
+    width: 40px;
+    height: 120px;
+}
+
+.top,
+.bottom {
+    width: 200px;
+    height: 40px;
+}
+
+
+.front {
+    transform: translateZ(20px);
+}
+
+.back {
+    transform: rotateY(180deg) translateZ(20px);
+}
+
+.left {
+    transform: rotateY(-90deg) translateZ(20px);
+}
+
+.right {
+    transform: rotateY(90deg) translateZ(180px);
+}
+
+.top {
+    transform: rotateX(90deg) translateZ(20px);
+}
+
+.bottom {
+    transform: rotateX(-90deg) translateZ(100px);
+}
+
+
+@keyframes spin {
+    0% {
+        transform: rotateX(0deg) rotateY(0deg);
+    }
+
+    100% {
+        transform: rotateX(360deg) rotateY(360deg);
+    }
 }
